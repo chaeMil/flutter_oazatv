@@ -45,7 +45,7 @@ class HomeScreenState extends State<HomeScreen> {
                     topRight: Radius.circular(6.0)),
                 child: AspectRatio(
                   aspectRatio: 16 / 9,
-                  child: Image.network("https://via.placeholder.com/150",
+                  child: Image.network(video.getThumb(),
                       alignment: Alignment.center, fit: BoxFit.fitWidth),
                 )),
             Padding(

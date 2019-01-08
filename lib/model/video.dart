@@ -1,3 +1,5 @@
+import 'package:flutter_oazatv/api/api.dart';
+
 class Video {
   int id;
   String hash_id;
@@ -31,14 +33,20 @@ class Video {
   }
 
   String getThumb() {
-    return this
-        .archive_files
-        .where((archiveFile) => archiveFile.file_type == "image")
-        .toList()
-        .first
-        .file
-        .thumb
-        .url;
+    String path;
+    try {
+      path = archive_files
+          .where((archiveFile) => archiveFile.file_type == "image")
+          .toList()
+          .first
+          .file
+          .thumb
+          .url;
+    } catch (e) {}
+    if (path != null)
+      return "${Api.server}$path";
+    else
+      return "";
   }
 
   static Video fromJson(Map<String, dynamic> json) {
