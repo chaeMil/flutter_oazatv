@@ -10,16 +10,18 @@ class VideoScreen extends StatefulWidget {
 class _VideoScreenState extends State<VideoScreen> {
   @override
   Widget build(BuildContext context) {
-    final playerWidget = new Chewie(
-      new VideoPlayerController.network(
-          'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4'),
-      aspectRatio: 21 / 9,
-      autoPlay: true,
-      looping: true,
-    );
+    final playerWidget = Chewie(
+        VideoPlayerController.network(
+            'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4'),
+        aspectRatio: 21 / 9,
+        autoPlay: true,
+        looping: false);
 
     return MaterialApp(
       title: 'Video Demo',
+      theme: new ThemeData.light().copyWith(
+        platform: TargetPlatform.iOS,
+      ),
       home: Scaffold(
         body: Center(child: playerWidget),
       ),
