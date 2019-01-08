@@ -3,7 +3,7 @@ import 'package:flutter_oazatv/model/video.dart';
 import 'package:http/http.dart' as http;
 
 class Api {
-  static const String server = "http://localhost:3000/";
+  static const String server = "http://192.168.0.17:3000/";
   static const String apiVersion = "api/v3/";
   static const String api = server + apiVersion;
 
