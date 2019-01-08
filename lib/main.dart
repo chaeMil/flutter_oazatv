@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'assets/theme.dart';
 import 'package:english_words/english_words.dart';
-import 'package:video_player/video_player.dart';
 import 'screens/video_test.dart';
 
 void main() => runApp(MyApp());
@@ -10,9 +10,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Startup Name Generator',
-      theme: new ThemeData(
-        primaryColor: Colors.red,
-      ),
+      theme: appTheme,
       home: RandomWords(),
     );
   }
