@@ -2,12 +2,12 @@ import 'package:chewie/chewie.dart';
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 
-class VideoApp extends StatefulWidget {
+class VideoScreen extends StatefulWidget {
   @override
-  _VideoAppState createState() => _VideoAppState();
+  _VideoScreenState createState() => _VideoScreenState();
 }
 
-class _VideoAppState extends State<VideoApp> {
+class _VideoScreenState extends State<VideoScreen> {
   @override
   Widget build(BuildContext context) {
     final playerWidget = new Chewie(

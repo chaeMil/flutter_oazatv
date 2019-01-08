@@ -105,7 +105,7 @@ class HomeScreenState extends State<HomeScreen> {
   void _openVideoTest() {
     Navigator.of(context)
         .push(MaterialPageRoute<void>(builder: (BuildContext context) {
-      return VideoApp();
+      return VideoScreen();
     }));
   }
 }
